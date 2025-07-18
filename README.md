@@ -1,4 +1,4 @@
-# Whisper Audio Transcription
+# Whisper™️ Audio Transcription
 
 This project contains a Python environment and scripts for transcribing audio files using OpenAI Whisper on Apple Silicon (M1/M2).
 
