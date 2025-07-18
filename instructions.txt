@@ -1,0 +1,78 @@
+Here’s exactly how to get Whisper working on your machine:
+
+⸻
+
+🚀 Whisper on MacBook (M2, M2 Max, M1, etc.)
+
+🛠 Step 1: Install Homebrew (if not installed)
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
+⸻
+
+🛠 Step 2: Install dependencies
+
+brew install ffmpeg
+
+
+⸻
+
+🛠 Step 3: Create a Python environment (recommended)
+
+python3 -m venv whisper-env
+source whisper-env/bin/activate
+
+
+⸻
+
+🛠 Step 4: Install Whisper and PyTorch (with MPS support)
+
+pip install --upgrade pip setuptools wheel
+
+# Install PyTorch with MPS (Metal backend for Apple Silicon)
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+# Install Whisper
+pip install openai-whisper
+
+
+⸻
+
+📝 Whisper Transcription Script
+
+Save this as transcribe_whisper.py in the same folder as your AUDIO_9501.m4a:
+
+import whisper
+
+# Load Whisper model (tiny, base, small, medium, large)
+model = whisper.load_model("base")
+
+# Path to your audio file
+audio_path = "AUDIO_9501.m4a"
+output_text_file = "AUDIO_9501_transcription.txt"
+
+# Transcribe
+print(f"Transcribing {audio_path} ...")
+result = model.transcribe(audio_path)
+
+# Save transcript
+with open(output_text_file, "w") as f:
+    f.write(result["text"])
+
+print("✅ Transcription complete!")
+print(f"Transcript saved to {output_text_file}")
+
+
+⸻
+
+🛠 Step 5: Run the transcription
+
+python transcribe_whisper.py
+
+
+⸻
+
+✅ This will generate a file called AUDIO_9501_transcription.txt with your transcript.
+
+⸻
