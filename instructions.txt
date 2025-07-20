@@ -41,7 +41,7 @@ pip install openai-whisper
 
 📝 Whisper Transcription Script
 
-Save this as transcribe_whisper.py in the same folder as your AUDIO_9501.m4a:
+Save this as transcribe_whisper.py in the same folder as your example.m4a:
 
 import whisper
 
@@ -49,8 +49,8 @@ import whisper
 model = whisper.load_model("base")
 
 # Path to your audio file
-audio_path = "AUDIO_9501.m4a"
-output_text_file = "AUDIO_9501_transcription.txt"
+audio_path = "example.m4a"
+output_text_file = "example_transcription.txt"
 
 # Transcribe
 print(f"Transcribing {audio_path} ...")
@@ -73,6 +73,6 @@ python transcribe_whisper.py
 
 ⸻
 
-✅ This will generate a file called AUDIO_9501_transcription.txt with your transcript.
+✅ This will generate a file called example_transcription.txt with your output.
 
 ⸻
