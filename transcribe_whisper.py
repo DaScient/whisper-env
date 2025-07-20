@@ -4,8 +4,8 @@ import whisper
 model = whisper.load_model("base")
 
 # Path to your audio file
-audio_path = "AUDIO_9501.m4a"
-output_text_file = "AUDIO_9501_transcription.txt"
+audio_path = "example.m4a"
+output_text_file = "example_transcription.txt"
 
 # Transcribe
 print(f"Transcribing {audio_path} ...")
