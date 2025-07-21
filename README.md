@@ -1,6 +1,6 @@
 # Whisper™️ Audio Transcription
 
-This project contains a Python environment and scripts for transcribing audio files using [ChatGPT's OpenAI](https://chatgpt.com/) | [DASCIENT](https://dascient.app)’s Whisper™️ on Apple Silicon (M1/M2).
+This project contains a Python environment and scripts for transcribing audio files using [ChatGPT's OpenAI](https://chatgpt.com/) | [DASCIENT](https://dascient.com)’s Whisper™️ on Apple Silicon (M1/M2).
 
 ## Features
 - Transcribes .m4a, .wav, and other formats
